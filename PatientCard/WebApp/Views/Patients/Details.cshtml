@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WebApp.Models.VisitHistory>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Patient)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Doctor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DoctorName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Diagnosis)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Complaint)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.VisitDate)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Doctor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DoctorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Diagnosis)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Complaint)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VisitDate)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

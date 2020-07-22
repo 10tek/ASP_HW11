@@ -16,5 +16,10 @@ namespace WebApp.Data
         {
             Database.EnsureCreated();
         }
+
+        public DataContext()
+        {
+
+        }
     }
 }
